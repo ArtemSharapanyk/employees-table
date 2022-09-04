@@ -29,6 +29,11 @@
     "project": "./tsconfig.json"
   },
   "plugins": ["react", "@typescript-eslint", "prettier"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"]
+    }
+  ],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
     "import/extensions": [
