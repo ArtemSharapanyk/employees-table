@@ -1,0 +1,60 @@
+.employees {
+  &__container {
+    width: 100%;
+    display: flex;
+  }
+
+  .active-employeer {
+    margin-bottom: 10px;
+  }
+
+  .active-employees-list {
+    padding-left: 20px;
+  }
+
+  .employeer-element {
+    width: 100%;
+    margin-bottom: 20px;
+
+    &_active {
+      color: blue;
+    }
+
+    &__initials {
+      margin-bottom: 10px;
+    }
+
+    &__radios {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .RadioButton {
+      margin-right: 10px;
+    }
+  }
+
+  &__employees-list,
+  &__active-employees-list {
+    height: 100%;
+    padding: 10px;
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  &__employees-list {
+    width: 70%;
+    border-right: 1px solid grey;
+  }
+
+  &__active-employees-list {
+    width: 30%;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+}

@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.page-container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scroll-bar {
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    display: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    padding: 0;
+    background: rgb(80, 80, 83);
+    background: linear-gradient(
+      90deg,
+      rgba(80, 80, 83, 1) 0%,
+      rgba(54, 54, 56, 1) 35%,
+      rgba(11, 41, 47, 1) 100%
+    );
+    display: none;
+  }
+}
+
+ul {
+  padding: 0;
+}
