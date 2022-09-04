@@ -5,9 +5,15 @@ import { useGetUsersQuery } from "../../../redux/asyncActions/users";
 import { leadDataToTableUnderstending } from "../../../helpers/ui/table";
 import { createUniqueReactKey } from "../../../helpers";
 import { ActiveEmployeesList } from "./ActiveEmployeesList/ActiveEmployeesList";
+import { showPopup } from "../../../helpers/ui/popup";
+import { ServerError } from "../../../helpers/errors";
 
 const Employees = () => {
-  const { isLoading, data } = useGetUsersQuery(null);
+  const { isLoading, data, error } = useGetUsersQuery(null);
+
+  if (error) {
+    showPopup(new ServerError(error as any).getMessage());
+  }
 
   const employeesTableData = useMemo(() => {
     if (data) {

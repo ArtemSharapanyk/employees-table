@@ -1,6 +1,7 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable react/require-default-props */
 import React, { FC, ReactNode } from "react";
+import { createUniqueReactKey } from "../../../helpers";
 import { TableDataInterface } from "../../../interfaces/components/table";
 import "./Table.scss";
 
@@ -24,7 +25,10 @@ export const Table: FC<Props> = ({
     <div className={`table ${classes || ""} scroll-bar`}>
       <div className="table__columns">
         {data.map((colum) => (
-          <div className="table__column">
+          <div
+            className="table__column"
+            key={createUniqueReactKey(colum.columId, "column")}
+          >
             <div className="table__column-head">
               <div className="table__column-name">{colum.titleOfColum}</div>
             </div>

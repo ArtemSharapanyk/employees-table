@@ -12,7 +12,7 @@ export const usersApi = createApi({
   endpoints: (builder) => ({
     getUsers: builder.query<FilteredUserByLetterInterface[], null>({
       query: () => ({
-        url: ApiEndpoints.USERS,
+        url: `${ApiEndpoints.USERS}`,
       }),
       // @ts-ignore
       transformResponse: (response) => {
