@@ -20,5 +20,3 @@ jobs:
         run: npm run build
       - name: run test
         run: npm run test
-      - name: check lint warning/errors
-        run: npm run lint
